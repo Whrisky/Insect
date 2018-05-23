@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Insect</string>
+    <string name="user_name">用户名</string>
+    <string name="pwd">密码</string>
 </resources>
