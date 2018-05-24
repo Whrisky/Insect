@@ -1,6 +1,7 @@
 package com.edu.yymfor.insect;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 String user_name = user_wrapper.getEditText().getText().toString();
                 if(tf.validateMoudle().isEmailAdress(user_name)){
                     doLogin();
+                    Intent in = new Intent(MainActivity.this, WelcomeActivity.class);
+                    startActivity(in);
                 }else{
                     user_wrapper.setError("请输入正确邮箱地址");
                 }
