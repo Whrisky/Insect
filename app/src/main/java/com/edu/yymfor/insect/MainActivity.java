@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 if(tf.validateMoudle().isEmailAdress(user_name)){
                     doLogin();
                     Intent in = new Intent(MainActivity.this, WelcomeActivity.class);
+                    in.putExtra("data", "hello welcome");
                     startActivity(in);
                 }else{
                     user_wrapper.setError("请输入正确邮箱地址");
